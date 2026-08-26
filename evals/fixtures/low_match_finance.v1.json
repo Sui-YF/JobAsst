@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "fixture_id": "low_match_finance",
+  "fixture_version": 1,
+  "locked": true,
+  "source": {"type": "synthetic_jd_with_real_evidence_snapshot", "application_id": null},
+  "label": "明显低匹配岗位",
+  "input": {
+    "jd_text": "注册会计师岗位：必须持有CPA证书，独立完成上市公司审计，熟悉合并报表和企业所得税申报，至少三年会计师事务所经验。",
+    "base_resume": {"id": "BASE-LOW", "name": "综合简历", "content_text": "IGG Cinematic Designer\nUE5 C++项目\n仓库安全沟通经历。"},
+    "career_evidence": [
+      {"id": "LOW-RES", "evidence_origin": "resume_declared", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "direct", "organization": "IGG", "official_job_title": "Cinematic Designer", "evidence_type": "Employment", "statement": "使用UE制作游戏广告动画。", "skills": ["UE"]},
+      {"id": "LOW-DEEP", "evidence_origin": "deep_dive_confirmed", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "direct", "organization": "", "official_job_title": "", "evidence_type": "Project", "statement": "使用C++开发UE5 Demo。", "skills": ["C++"]},
+      {"id": "LOW-MAN", "evidence_origin": "manual_confirmed", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "negative", "organization": "", "official_job_title": "", "evidence_type": "Certification", "statement": "用户明确声明没有CPA证书。", "skills": []},
+      {"id": "LOW-SKIP", "evidence_origin": "resume_declared", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "transferable", "organization": "Pratts", "official_job_title": "Warehouse Associate", "evidence_type": "Employment", "statement": "向员工解释安全要求。", "skills": ["沟通"]}
+    ],
+    "experience_blocks": [{"id": "B-IGG", "heading": "IGG", "category": "Employment"}, {"id": "B-UE", "heading": "UE项目", "category": "Project"}, {"id": "B-WH", "heading": "Pratts", "category": "Employment"}],
+    "content_controls": {"LOW-RES": "must_include", "LOW-SKIP": "skip"}
+  }
+}

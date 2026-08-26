@@ -1,0 +1,16 @@
+{
+  "fixture_id": "",
+  "fixture_version": 1,
+  "reviewer": "",
+  "scores": {
+    "requirement_coverage": 0,
+    "match_boundary": 0,
+    "evidence_grounding": 0,
+    "truthfulness": 0,
+    "positioning_quality": 0,
+    "content_prioritization": 0,
+    "resume_readability": 0
+  },
+  "critical_truthfulness_failure": false,
+  "notes": "仅评价模型输出质量；不得写入或修改Career Evidence/User Claim。"
+}

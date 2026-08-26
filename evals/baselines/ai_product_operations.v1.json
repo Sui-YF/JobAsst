@@ -1,0 +1,18 @@
+{
+  "schema_version": 1, "fixture_id": "ai_product_operations", "fixture_version": 1, "locked": true,
+  "outputs": {
+    "analysis": {"requirements": [
+      {"id": "R-01", "text": "AI产品运营与流程迭代", "nature": "match", "priority": "core_responsibility", "match_status": "direct_partial", "fact_ids": ["AIOPS-DEEP", "AIOPS-MAN"]},
+      {"id": "R-02", "text": "用户反馈和数据分析", "nature": "match", "priority": "must_have", "match_status": "direct_partial", "fact_ids": ["AIOPS-RES", "AIOPS-DEEP"]},
+      {"id": "R-03", "text": "增长转化留存", "nature": "match", "priority": "preferred", "match_status": "no_evidence", "fact_ids": []}
+    ]},
+    "authority_probe_fact_ids": ["AIOPS-RES", "AIOPS-DEEP", "AIOPS-MAN"],
+    "block_ranking": [
+      {"block_id": "B-IGG", "relevance": "High", "recommended_action": "expand"},
+      {"block_id": "B-AI", "relevance": "High", "recommended_action": "expand"},
+      {"block_id": "B-WH", "relevance": "Low", "recommended_action": "remove"}
+    ],
+    "guardrail_cases": [],
+    "draft_text": "AI产品运营相关实践\n根据真实求职测试反馈迭代AI求职助手的匹配解释和简历润色流程。\nIGG：根据点击率、下载率及市场反馈调整素材。"
+  }
+}

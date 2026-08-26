@@ -1,0 +1,18 @@
+{
+  "schema_version": 1, "fixture_id": "ue_cpp_development", "fixture_version": 1, "locked": true,
+  "outputs": {
+    "analysis": {"requirements": [
+      {"id": "R-01", "text": "UE5 C++游戏功能开发", "nature": "match", "priority": "core_responsibility", "match_status": "direct_strong", "fact_ids": ["UECPP-RES", "UECPP-DEEP"]},
+      {"id": "R-02", "text": "商业项目UE经验", "nature": "match", "priority": "preferred", "match_status": "direct_partial", "fact_ids": ["UECPP-MAN"]},
+      {"id": "R-03", "text": "引擎机制和性能优化", "nature": "match", "priority": "must_have", "match_status": "no_evidence", "fact_ids": []}
+    ]},
+    "authority_probe_fact_ids": ["UECPP-RES", "UECPP-DEEP", "UECPP-MAN"],
+    "block_ranking": [
+      {"block_id": "B-UE", "relevance": "High", "recommended_action": "expand"},
+      {"block_id": "B-IGG", "relevance": "Medium", "recommended_action": "compress"},
+      {"block_id": "B-WH", "relevance": "Low", "recommended_action": "remove"}
+    ],
+    "guardrail_cases": [],
+    "draft_text": "UE5 C++开发\n使用UE5 C++独立开发GAS战斗功能和Slate编辑器工具。\n补充编译错误排查案例。"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1, "fixture_id": "low_match_finance", "fixture_version": 1, "locked": true,
+  "outputs": {
+    "analysis": {"requirements": [
+      {"id": "R-01", "text": "CPA证书", "nature": "eligibility", "priority": "must_have", "match_status": "not_met", "fact_ids": ["LOW-MAN"]},
+      {"id": "R-02", "text": "上市公司审计与合并报表", "nature": "match", "priority": "core_responsibility", "match_status": "no_evidence", "fact_ids": []},
+      {"id": "R-03", "text": "会计师事务所经验", "nature": "eligibility", "priority": "must_have", "match_status": "no_evidence", "fact_ids": []}
+    ]},
+    "authority_probe_fact_ids": ["LOW-RES", "LOW-DEEP", "LOW-MAN"],
+    "block_ranking": [
+      {"block_id": "B-IGG", "relevance": "Low", "recommended_action": "compress"},
+      {"block_id": "B-UE", "relevance": "Low", "recommended_action": "remove"},
+      {"block_id": "B-WH", "relevance": "Low", "recommended_action": "remove"}
+    ],
+    "guardrail_cases": [],
+    "draft_text": "相关经历有限\n使用UE制作游戏广告动画。\n不声明CPA、审计或会计经验。"
+  }
+}

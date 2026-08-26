@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "fixture_id": "ai_product_manager",
+  "fixture_version": 1,
+  "locked": true,
+  "outputs": {
+    "analysis": {"requirements": [
+      {"id": "R-01", "text": "AI产品需求分析与方案落地", "nature": "match", "priority": "core_responsibility", "match_status": "direct_strong", "fact_ids": ["AIPM-DEEP", "AIPM-MAN"]},
+      {"id": "R-02", "text": "用户反馈与数据驱动迭代", "nature": "match", "priority": "must_have", "match_status": "direct_partial", "fact_ids": ["AIPM-RES", "AIPM-DEEP"]},
+      {"id": "R-03", "text": "跨团队项目推进", "nature": "match", "priority": "must_have", "match_status": "transferable_match", "fact_ids": ["AIPM-LOW"]}
+    ], "strengths": [], "weaknesses": []},
+    "authority_probe_fact_ids": ["AIPM-RES", "AIPM-DEEP", "AIPM-MAN"],
+    "rematch": {
+      "before": {"requirements": [
+        {"id": "R-KEEP", "nature": "match", "match_status": "direct_strong", "fact_ids": ["AIPM-DEEP"], "gap_type": "none"},
+        {"id": "R-UP", "nature": "match", "match_status": "no_evidence", "fact_ids": [], "gap_type": "real_gap"}
+      ]},
+      "after": {"requirements": [
+        {"id": "R-KEEP", "nature": "match", "match_status": "transferable_match", "fact_ids": ["AIPM-DEEP"], "gap_type": "expression_gap", "reason": "模型随机降级"},
+        {"id": "R-UP", "nature": "match", "match_status": "direct_partial", "fact_ids": ["AIPM-MAN"], "gap_type": "expression_gap"}
+      ]},
+      "current_facts": [
+        {"id": "AIPM-DEEP", "statement": "设计AI求职助手的Career Evidence、JD匹配和真实性审核闭环。", "organization": "", "official_job_title": "", "evidence_type": "Project", "skills": ["AI产品设计"], "evidence_kind": "direct", "verification_status": "confirmed"},
+        {"id": "AIPM-MAN", "statement": "使用DeepSeek和Codex辅助需求拆解、开发与问题排查，并由本人完成方案判断和验收。", "organization": "", "official_job_title": "", "evidence_type": "Skill", "skills": ["LLM", "AI Coding"], "evidence_kind": "direct", "verification_status": "confirmed"}
+      ],
+      "expected_status": {"R-KEEP": "direct_strong"},
+      "expected_upgrade": {"R-UP": "direct_partial"}
+    },
+    "changed_evidence_rematch": {
+      "before": {"requirements": [{"id": "R-CHANGED", "nature": "match", "match_status": "direct_strong", "fact_ids": ["AIPM-DEEP"], "gap_type": "none"}]},
+      "after": {"requirements": [{"id": "R-CHANGED", "nature": "match", "match_status": "transferable_match", "fact_ids": ["AIPM-DEEP"], "gap_type": "expression_gap"}]},
+      "original_facts": [{"id": "AIPM-DEEP", "statement": "设计AI求职助手的Career Evidence、JD匹配和真实性审核闭环。", "organization": "", "official_job_title": "", "evidence_type": "Project", "skills": ["AI产品设计"], "evidence_kind": "direct", "verification_status": "confirmed"}],
+      "current_facts": [{"id": "AIPM-DEEP", "statement": "仅参与讨论AI求职助手。", "organization": "", "official_job_title": "", "evidence_type": "Project", "skills": [], "evidence_kind": "direct", "verification_status": "confirmed"}],
+      "expected_status": {"R-CHANGED": "transferable_match"}
+    },
+    "block_ranking": [
+      {"block_id": "B-AI", "relevance": "High", "recommended_action": "expand"},
+      {"block_id": "B-IGG", "relevance": "Medium", "recommended_action": "compress"},
+      {"block_id": "B-WH", "relevance": "Low", "recommended_action": "remove"}
+    ],
+    "guardrail_cases": [
+      {"expected": "accept", "edit": {"action": "reframe", "target_section": "Experience", "target_text": "", "original_text": "在IGG根据反馈调整素材。", "proposed_text": "具备跨国游戏公司工作经历，基于投放数据反馈持续优化素材。", "fact_ids": ["AIPM-RES"], "requirement_ids": ["R-02"], "modification_reason": "JD定位"}},
+      {"expected": "reject", "edit": {"action": "rewrite", "target_section": "Experience", "target_text": "", "original_text": "在IGG根据反馈调整素材。", "proposed_text": "主导10人团队实现CTR提升30%。", "fact_ids": ["AIPM-RES"], "requirement_ids": ["R-02"], "modification_reason": "事实升级"}}
+    ],
+    "draft_text": "AI产品项目\n设计AI求职助手的Career Evidence、JD匹配和真实性审核闭环。\nIGG：基于投放数据反馈优化素材。"
+  }
+}

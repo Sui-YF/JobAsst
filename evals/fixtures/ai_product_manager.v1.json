@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "fixture_id": "ai_product_manager",
+  "fixture_version": 1,
+  "locked": true,
+  "source": {"type": "database_snapshot", "application_id": "JOB-85E10E05"},
+  "label": "AI产品经理真实案例快照",
+  "input": {
+    "jd_text": "负责AI产品需求分析、方案设计与落地；理解大模型能力边界，能使用用户反馈和数据持续迭代；具备跨团队项目推进能力。",
+    "base_resume": {"id": "BASE-AIPM", "name": "AI产品经理简历", "content_text": "IGG Cinematic Designer\n在IGG根据反馈调整素材。\n仓库安全沟通经历。\n设计AI求职助手。"},
+    "career_evidence": [
+      {"id": "AIPM-RES", "evidence_origin": "resume_declared", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "direct", "organization": "IGG", "official_job_title": "Cinematic Designer", "evidence_type": "Employment", "statement": "在IGG查看点击率、下载率，并根据欧美市场反馈调整素材。", "skills": ["数据反馈"]},
+      {"id": "AIPM-DEEP", "evidence_origin": "deep_dive_confirmed", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "direct", "organization": "", "official_job_title": "", "evidence_type": "Project", "statement": "设计AI求职助手的Career Evidence、JD匹配和真实性审核闭环。", "skills": ["AI产品设计"]},
+      {"id": "AIPM-MAN", "evidence_origin": "manual_confirmed", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "direct", "organization": "", "official_job_title": "", "evidence_type": "Skill", "statement": "使用DeepSeek和Codex辅助需求拆解、开发与问题排查，并由本人完成方案判断和验收。", "skills": ["LLM", "AI Coding"]},
+      {"id": "AIPM-LOW", "evidence_origin": "resume_declared", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "transferable", "organization": "Pratts", "official_job_title": "Warehouse Associate", "evidence_type": "Employment", "statement": "向仓库员工解释安全要求。", "skills": ["沟通"]}
+    ],
+    "experience_blocks": [
+      {"id": "B-AI", "heading": "AI求职助手", "category": "Project"},
+      {"id": "B-IGG", "heading": "IGG", "category": "Employment"},
+      {"id": "B-WH", "heading": "Pratts", "category": "Employment"}
+    ],
+    "content_controls": {"AIPM-DEEP": "must_include", "AIPM-LOW": "skip"}
+  }
+}

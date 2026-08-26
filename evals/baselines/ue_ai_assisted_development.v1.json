@@ -1,0 +1,34 @@
+{
+  "schema_version": 1, "fixture_id": "ue_ai_assisted_development", "fixture_version": 1, "locked": true,
+  "outputs": {
+    "analysis": {"requirements": [
+      {"id": "R-01", "text": "UE C++与蓝图开发", "nature": "match", "priority": "core_responsibility", "match_status": "direct_strong", "fact_ids": ["UEAI-RES", "UEAI-MAN"]},
+      {"id": "R-02", "text": "AI辅助编程实际案例", "nature": "match", "priority": "must_have", "match_status": "direct_strong", "fact_ids": ["UEAI-DEEP"]},
+      {"id": "R-03", "text": "团队沟通", "nature": "match", "priority": "preferred", "match_status": "transferable_match", "fact_ids": ["UEAI-LOW"]}
+    ]},
+    "authority_probe_fact_ids": ["UEAI-RES", "UEAI-DEEP", "UEAI-MAN"],
+    "rematch": {
+      "before": {"requirements": [
+        {"id": "R-KEEP", "nature": "match", "match_status": "direct_strong", "fact_ids": ["UEAI-RES"], "gap_type": "none"},
+        {"id": "R-UP", "nature": "match", "match_status": "no_evidence", "fact_ids": [], "gap_type": "real_gap"}
+      ]},
+      "after": {"requirements": [
+        {"id": "R-KEEP", "nature": "match", "match_status": "direct_partial", "fact_ids": ["UEAI-RES"], "gap_type": "expression_gap"},
+        {"id": "R-UP", "nature": "match", "match_status": "direct_strong", "fact_ids": ["UEAI-DEEP"], "gap_type": "none"}
+      ]},
+      "current_facts": [
+        {"id": "UEAI-RES", "statement": "在UE5 Demo中使用C++实现核心逻辑，并通过蓝图完成配置和表现层连接。", "organization": "", "official_job_title": "", "evidence_type": "Project", "skills": ["UE5", "C++", "Blueprint"], "evidence_kind": "direct", "verification_status": "confirmed"},
+        {"id": "UEAI-DEEP", "statement": "使用Codex辅助UE C++代码解释、方案比较和编译错误排查，本人完成架构取舍与验收。", "organization": "", "official_job_title": "", "evidence_type": "Project", "skills": ["Codex", "UE C++"], "evidence_kind": "direct", "verification_status": "confirmed"}
+      ],
+      "expected_status": {"R-KEEP": "direct_strong"},
+      "expected_upgrade": {"R-UP": "direct_strong"}
+    },
+    "block_ranking": [
+      {"block_id": "B-UE", "relevance": "High", "recommended_action": "expand"},
+      {"block_id": "B-IGG", "relevance": "Medium", "recommended_action": "compress"},
+      {"block_id": "B-WH", "relevance": "Low", "recommended_action": "remove"}
+    ],
+    "guardrail_cases": [],
+    "draft_text": "UE C++ / AI辅助开发\n使用Codex辅助UE C++代码解释、方案比较和编译错误排查，本人完成架构取舍与验收。\nUE5 Demo：C++核心逻辑与蓝图表现层连接。"
+  }
+}

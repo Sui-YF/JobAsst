@@ -1,0 +1,12 @@
+services:
+  career-agent:
+    build: .
+    env_file: .env
+    ports:
+      - "${STREAMLIT_SERVER_PORT:-8501}:${STREAMLIT_SERVER_PORT:-8501}"
+    volumes:
+      - career-agent-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  career-agent-data:

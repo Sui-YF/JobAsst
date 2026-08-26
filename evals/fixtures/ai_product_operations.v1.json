@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "fixture_id": "ai_product_operations",
+  "fixture_version": 1,
+  "locked": true,
+  "source": {"type": "database_snapshot", "application_id": "JOB-64BB77A5"},
+  "label": "AI产品运营真实案例快照",
+  "input": {
+    "jd_text": "负责AI产品运营策略、用户反馈和数据分析，推进内容与流程迭代；有增长、转化或留存经验优先。",
+    "base_resume": {"id": "BASE-AIOPS", "name": "AI产品简历", "content_text": "IGG Cinematic Designer\n在IGG根据反馈调整素材。\n设计AI求职助手。"},
+    "career_evidence": [
+      {"id": "AIOPS-RES", "evidence_origin": "resume_declared", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "direct", "organization": "IGG", "official_job_title": "Cinematic Designer", "evidence_type": "Employment", "statement": "在IGG查看点击率、下载率，并根据欧美市场反馈调整素材。", "skills": ["内容优化"]},
+      {"id": "AIOPS-DEEP", "evidence_origin": "deep_dive_confirmed", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "direct", "organization": "", "official_job_title": "", "evidence_type": "Project", "statement": "根据真实求职测试反馈迭代AI求职助手的匹配解释和简历润色流程。", "skills": ["反馈迭代"]},
+      {"id": "AIOPS-MAN", "evidence_origin": "manual_confirmed", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "transferable", "organization": "", "official_job_title": "", "evidence_type": "Skill", "statement": "使用AI工具整理需求并验证产品流程。", "skills": ["AI工具"]},
+      {"id": "AIOPS-LOW", "evidence_origin": "resume_declared", "verification_status": "confirmed", "allowed_for_generation": true, "evidence_kind": "direct", "organization": "Pratts", "official_job_title": "Warehouse Associate", "evidence_type": "Employment", "statement": "执行仓库日常作业。", "skills": []}
+    ],
+    "experience_blocks": [{"id": "B-IGG", "heading": "IGG", "category": "Employment"}, {"id": "B-AI", "heading": "AI求职助手", "category": "Project"}, {"id": "B-WH", "heading": "仓库", "category": "Employment"}],
+    "content_controls": {"AIOPS-DEEP": "must_include", "AIOPS-LOW": "skip"}
+  }
+}
