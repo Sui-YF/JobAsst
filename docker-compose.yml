@@ -6,7 +6,14 @@ services:
       - "${STREAMLIT_SERVER_PORT:-8501}:${STREAMLIT_SERVER_PORT:-8501}"
     volumes:
       - career-agent-data:/app/data
+    init: true
+    stop_grace_period: 30s
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
 
 volumes:
   career-agent-data:

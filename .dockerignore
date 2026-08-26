@@ -1,4 +1,4 @@
-.env
+.env*
 .git
 .gitignore
 .venv
@@ -10,3 +10,4 @@ logs
 streamlit*.log
 tests
 requirements-ocr.txt
+requirements-dev.txt
